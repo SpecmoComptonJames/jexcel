@@ -4,11 +4,11 @@
     "description": "jQuery plugin for embed a excel-like spreadsheet in your apps or website.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/paulhodel/jexcel.git"
+        "url": "https://github.com/SpecmoComptonJames/jexcel.git"
     },
     "author": {
-        "name": "Paul Hodel <paul.hodel@gmail.com>",
-        "url": "https://www.linkedin.com/in/paulhodel"
+        "name": "James Compton <james.compton@specmo.com>",
+        "url": ""
     },
     "maintainers": [
         {
