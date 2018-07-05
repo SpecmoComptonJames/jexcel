@@ -2629,11 +2629,15 @@ var methods = {
                     }
                     // Get value
                     val = $(this).jexcel('getValue', $(cell));
-                    if (val.match(/,/g) || val.match(/\n/) || val.match(/\"/)) {
+                    /**********************************************/
+                    //JC SPC fix issue with check box cell values which don't have a 'match' function as script doesn't seem to account for none string types??
+                    //if ((val.match(/,/g) || val.match(/\n/) || val.match(/\"/))) {
+                    if ((val.match) && (val.match(/,/g) || val.match(/\n/) || val.match(/\"/))) {
                         // Scape double quotes
                         val = val.replace(new RegExp('"', 'g'), '""');
                         val = '"' + val + '"'; 
                     }
+                    /**********************************************/
                     row += val;
                     pc = true;
                 }
