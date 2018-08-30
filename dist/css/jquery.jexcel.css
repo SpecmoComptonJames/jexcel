@@ -205,7 +205,7 @@
 
 .jexcel > tbody > tr > td > input[type=checkbox]
 {
-    width:20px;
+    width:12px;
     margin-top:2px;
 }
 
@@ -218,17 +218,6 @@
     background-position-x: 100%;
     background-position-y: 40%;
     background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);
-}
-
-.jexcel > tbody > tr > td:besfore
-{
-    content:'-';
-    float:right;
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 40%;
-    width:16px;
-    bsackground-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSdibGFjaycgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);
 }
 
 .jexcel, .jexcel td, .jexcel_corner {
@@ -344,6 +333,9 @@
     color: #555;
     font-family: sans-serif;
     font-size: 11px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
     -webkit-transition: opacity .5s ease-in-out;
     -moz-transition: opacity .5s ease-in-out;
     -ms-transition: opacity .5s ease-in-out;
@@ -365,6 +357,7 @@
     padding: 6px 8px 6px 30px;
     width: 250px;
     position: relative;
+    cursor: default;
 }
 
 .jexcel_contextmenu a span
