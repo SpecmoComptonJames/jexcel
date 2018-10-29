@@ -84,7 +84,11 @@ var methods = {
             // Allow Overflow
             tableHeight:'300px',
             // About message
-            about:'jExcel Spreadsheet\\nVersion 1.5.7\\nAuthor: Paul Hodel <paul.hodel@gmail.com>\\nWebsite: https://bossanova.uk/jexcel'
+            about:'jExcel Spreadsheet\\nVersion 1.5.7\\nAuthor: Paul Hodel <paul.hodel@gmail.com>\\nWebsite: https://bossanova.uk/jexcel',
+            //enable/disable Context SaveAs
+            showSaveAsInContextMenus: true,
+            //showSaveAsInContextMenus
+            showCopyInContextMenus: true
         };
 
         // Id
@@ -500,9 +504,9 @@ var methods = {
                                     if ($.fn.jexcel.defaults[$.fn.jexcel.current].allowDeleteColumn == true) {
                                         contextMenuContent += "<a id='jexcel_ctxmnu_del_" + $.fn.jexcel.current + "'>Delete this column<span></span></a>";
                                     }
-
-                                    contextMenuContent += "<hr><a id='jexcel_ctxmnu_save_" + $.fn.jexcel.current + "' >Save as...<span>Ctrl + S</span></a>";
-
+                                    if ($.fn.jexcel.defaults[$.fn.jexcel.current].showSaveAsInContextMenus == true) {
+                                        contextMenuContent += "<hr><a id='jexcel_ctxmnu_save_" + $.fn.jexcel.current + "' >Save as...<span>Ctrl + S</span></a>";
+                                    }
                                     if ($.fn.jexcel.defaults[$.fn.jexcel.current].about) {
                                         contextMenuContent += "<a id='jexcel_ctxmnu_abt_" + $.fn.jexcel.current + "'>About<span></span></a>";
                                     }
@@ -517,10 +521,13 @@ var methods = {
                                     if ($.fn.jexcel.defaults[$.fn.jexcel.current].allowDeleteRow == true) {
                                         contextMenuContent += "<a id='jexcel_ctxmnu_delRow_" + $.fn.jexcel.current + "'>Delete this row<span></span></a><hr>";
                                     }
+                                    if ($.fn.jexcel.defaults[$.fn.jexcel.current].showSaveAsInContextMenus == true) {
+                                        contextMenuContent += "<hr><a id='jexcel_ctxmnu_save_" + $.fn.jexcel.current + "'>Save as...<span>Ctrl + S</span></a>";
+                                    }
+                                    if ($.fn.jexcel.defaults[$.fn.jexcel.current].showCopyInContextMenus == true) {
+                                        contextMenuContent += "<a id='jexcel_ctxmnu_copy_" + $.fn.jexcel.current + "'>Copy...<span>Ctrl + C</span></a>";
+                                    }
 
-                                    contextMenuContent += "<hr><a id='jexcel_ctxmnu_save_" + $.fn.jexcel.current + "'>Save as...<span>Ctrl + S</span></a>";
-
-                                    contextMenuContent += "<a id='jexcel_ctxmnu_copy_" + $.fn.jexcel.current + "'>Copy...<span>Ctrl + C</span></a>";
                                     if ($.fn.jexcel.defaults[$.fn.jexcel.current].about) {
                                         contextMenuContent += "<a id='jexcel_ctxmnu_abt_" + $.fn.jexcel.current + "'>About<span></span></a>";
                                     }
