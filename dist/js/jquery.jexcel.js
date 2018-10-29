@@ -86,7 +86,9 @@ var methods = {
             // About message
             about:'jExcel Spreadsheet\\nVersion 1.5.7\\nAuthor: Paul Hodel <paul.hodel@gmail.com>\\nWebsite: https://bossanova.uk/jexcel',
             //enable/disable Context SaveAs
-            showSaveAsInContextMenus: true
+            showSaveAsInContextMenus: true,
+            //showSaveAsInContextMenus
+            showCopyInContextMenus: true
         };
 
         // Id
@@ -522,7 +524,9 @@ var methods = {
                                     if ($.fn.jexcel.defaults[$.fn.jexcel.current].showSaveAsInContextMenus == true) {
                                         contextMenuContent += "<hr><a id='jexcel_ctxmnu_save_" + $.fn.jexcel.current + "'>Save as...<span>Ctrl + S</span></a>";
                                     }
-                                    contextMenuContent += "<a id='jexcel_ctxmnu_save_" + $.fn.jexcel.current + "'>Copy...<span>Ctrl + C</span></a>";
+                                    if ($.fn.jexcel.defaults[$.fn.jexcel.current].showCopyInContextMenus == true) {
+                                        contextMenuContent += "<a id='jexcel_ctxmnu_save_" + $.fn.jexcel.current + "'>Copy...<span>Ctrl + C</span></a>";
+                                    }
                                     if ($.fn.jexcel.defaults[$.fn.jexcel.current].about) {
                                         contextMenuContent += "<a id='jexcel_ctxmnu_abt_" + $.fn.jexcel.current + "'>About<span></span></a>";
                                     }
