@@ -525,7 +525,7 @@ var methods = {
                                         contextMenuContent += "<hr><a id='jexcel_ctxmnu_save_" + $.fn.jexcel.current + "'>Save as...<span>Ctrl + S</span></a>";
                                     }
                                     if ($.fn.jexcel.defaults[$.fn.jexcel.current].showCopyInContextMenus == true) {
-                                        contextMenuContent += "<a id='jexcel_ctxmnu_save_" + $.fn.jexcel.current + "'>Copy...<span>Ctrl + C</span></a>";
+                                        contextMenuContent += "<a id='jexcel_ctxmnu_copy_" + $.fn.jexcel.current + "'>Copy...<span>Ctrl + C</span></a>";
                                     }
                                     if ($.fn.jexcel.defaults[$.fn.jexcel.current].about) {
                                         contextMenuContent += "<a id='jexcel_ctxmnu_abt_" + $.fn.jexcel.current + "'>About<span></span></a>";
